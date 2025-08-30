@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animal Blogs</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+   </head>
+  <!-- Navbar -->
+   <nav class="logo">
+    <a href="#"><img src="./assets/logo.png" alt="logo"></a>
+    <!-- Hamburger -->
+    <div class="hamburger" id="hamburger"><i class="fa-solid fa-bars"></i></div>
+    <ul id="navLinks">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+    <body>
+   <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to Animal Blog</h1>
+    </section>
+     <!-- Cards Section -->
+  <section class="cards">
+    <div class="card">
+      <img src="./assets/dog.avif" alt="Card Image">
+      <h3>Dog</h3>
+      <p>A dog is a highly intelligent and loyal animal</p>
+    </div>
+    <div class="card">
+      <img src="./assets/cat.avif" alt="Card Image">
+      <h3>Cat</h3>
+      <p>Cats are one of the most popular and lovable pets in the world.</p>
+    </div>
+     <div class="card">
+      <img src="./assets/fox.avif" alt="Card Image">
+      <h3>Fox</h3>
+      <p>Foxes are small to medium-sized, dog-like mammals known for their cunning nature and distinctive bushy tails</p>
+    </div>
+  </section>
+  <section class="cards">
+    <div class="card">
+      <img src="./assets/parrot.avif" alt="Card Image">
+      <h3>Parrot</h3>
+      <p>Parrots are known as talking birds because they can imitate the human voice</p>
+    </div>
+    <div class="card">
+      <img src="./assets/monkey.avif" alt="Card Image">
+      <h3>Monkey</h3>
+      <p>Monkeys are intelligent and playful, as well as very emotional They can jump from one tree to another</p>
+    </div>
+    <div class="card">
+      <img src="./assets/dear.avif" alt="Card Image">
+      <h3>Deer</h3>
+      <p>Deer are large animals that have a white patch on their head, long legs, and slender body</p>
+    </div>
+  </section>
+   <!-- Welcome Popup Overlay -->
+  <!-- <div class="welcome-overlay" id="welcomeOverlay">
+    <div class="welcome-popup">
+      <span class="close-btn" id="welcomeCloseBtn">&times;</span>
+      <h2>🎉 Welcome! to My Blog</h2>
+      <p>Discover amazing animal facts and stories!</p>
+    </div> -->
+   <!-- Demo Content -->
+    <div class="demo-content">
+        <h1><i class="fas fa-rocket me-3"></i>Welcome to Our Website</h1>
+        <p class="lead">A popup form will appear in <span id="countdown">2</span> seconds...</p>
+    </div>
+
+    <!-- Countdown Display -->
+    <div class="countdown" id="countdownDisplay">
+        Form appears in: <span id="countdownTimer">2</span>s
+    </div>
+
+    <!-- Contact Form Popup -->
+    <div class="form-overlay" id="formOverlay">
+        <div class="form-popup">
+            <div class="form-header">
+                <span class="close-btn" id="formCloseBtn">&times;</span>
+                <h2 class="text-center mb-0">
+                    <i class="fas fa-user-edit me-2"></i>Registration Form
+                </h2>
+            </div>
+            
+            <div class="form-body">
+                <div class="alert alert-success success-message" id="successMessage" role="alert">
+                    <i class="fas fa-check-circle me-2"></i>
+                    <strong>Success!</strong> Your registration has been submitted successfully.
+                </div>
+
+                <form id="registrationForm">
+                    <div class="mb-3">
+                        <label for="fullName" class="form-label">
+                            <i class="fas fa-user me-1"></i>Full Name *
+                        </label>
+                        <input type="text" class="form-control" id="fullName" name="fullName" required>
+                        <div class="invalid-feedback">
+                            Please provide your full name.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">
+                            <i class="fas fa-envelope me-1"></i>Email Address *
+                        </label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid email address.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">
+                            <i class="fas fa-phone me-1"></i>Phone Number *
+                        </label>
+                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                        <div class="invalid-feedback">
+                            Please provide your phone number.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="age" class="form-label">
+                            <i class="fas fa-birthday-cake me-1"></i>Age *
+                        </label>
+                        <input type="number" class="form-control" id="age" name="age" min="5" max="100" required>
+                        <div class="age-info" id="ageInfo">
+                            Enter your age to see relevant subject options
+                        </div>
+                        <div class="invalid-feedback">
+                            Please provide a valid age (5-100).
+                        </div>
+                    </div>
+
+                    <div class="mb-3 subject-transition" id="subjectGroup" style="display: none;">
+                        <label for="subject" class="form-label">
+                            <i class="fas fa-book me-1"></i><span id="subjectLabel">Subject</span> *
+                        </label>
+                        <select class="form-select" id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select a subject.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="message" class="form-label">
+                            <i class="fas fa-comment me-1"></i>Message *
+                        </label>
+                        <textarea class="form-control" id="message" name="message" rows="4"
+                                placeholder="Tell us about yourself or your inquiry..." required></textarea>
+                        <div class="invalid-feedback">
+                            Please provide your message.
+                        </div>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg submit-btn">
+                            <span class="button-text">
+                                <i class="fa-solid fa-paper-plane me-2"></i>Submit Registration
+                            </span>
+                            <span class="loading-spinner">
+                                <span class="spinner-border spinner-border-sm me-2" role="status"></span>
+                                Submitting...Your response
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+   <!-- Footer -->
+  <footer>
+  <div>
+    <h3>My Website</h3>
+    <p> &copy; 2025 All Rights Reserved</p>
+  </div>
+  <div>
+    <h3>Contact</h3>
+    <p>+91 987XXXXX</p>
+    <p>xyz@gmail.com</p>
+  </div>
+  <div>
+    <h3>Address</h3>
+    <p>New Delhi, India</p>
+  </div>
+</footer>
+  <script src="script.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
